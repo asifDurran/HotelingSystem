@@ -22,16 +22,16 @@ namespace HotelManagmentApp
 
         private void buttonNewClient_Click(object sender, EventArgs e)
         {
-            string clientid = textClientID.Text;
-            string reservationid = textReseveID.Text;
+            int clientid = Convert.ToInt32(textClientID.Text);
+            //int reservationid = Convert.ToInt32(textReseveID.Text);
             string roomtype = comboRoomTypeClient.SelectedValue.ToString();
-            string roomnumber = comboRoomNoClient.Text;
-            string datein = dateTimePickerIN.Text;
-            string dateout = dateTimePickerOUT.Text;
-          
-            if(textClientID.Text.Trim().Equals("") || textReseveID.Text.Trim().Equals("") || comboRoomTypeClient.Text.Trim().Equals("") || comboRoomNoClient.Text.Trim().Equals("") ||  dateTimePickerIN.Text.Trim().Equals("") || dateTimePickerOUT.Text.Trim().Equals(""))
+            int roomnumber = Convert.ToInt32(comboRoomNoClient.Text);
+            DateTime datein = dateTimePickerIN.Value;
+            DateTime dateout = dateTimePickerOUT.Value;
+
+            if (textClientID.Text.Trim().Equals("") || comboRoomTypeClient.Text.Trim().Equals("") || comboRoomNoClient.Text.Trim().Equals("") || dateTimePickerIN.Text.Trim().Equals("") || dateTimePickerOUT.Text.Trim().Equals(""))
             {
-                MessageBox.Show("All fields are required","Empty Fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("All fields are required", "Empty Fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -39,11 +39,11 @@ namespace HotelManagmentApp
 
                 try
                 {
-                    string sql = "INSERT INTO reservations(clientid,reservationid,roomtype,roomnumber,datein,dateout)VALUES(@clientid,@reservationid,@roomtype,@roomnumber,@datein,@dateout)";
+                    string sql = "INSERT INTO reservations(clientid,roomtype,roomnumber,datein,dateout)VALUES(@clientid,@roomtype,@roomnumber,@datein,@dateout)";
                     SqlCommand cmd = new SqlCommand(sql, con);
 
                     cmd.Parameters.AddWithValue("@clientid", clientid);
-                    cmd.Parameters.AddWithValue("@reservationid", reservationid);
+                    //cmd.Parameters.AddWithValue("@reservationid", reservationid);
                     cmd.Parameters.AddWithValue("@roomtype", roomtype);
                     cmd.Parameters.AddWithValue("@roomnumber", roomnumber);
                     cmd.Parameters.AddWithValue("@datein", datein);
@@ -55,11 +55,11 @@ namespace HotelManagmentApp
 
                     if (rows > 0)
                     {
-                        MessageBox.Show("Data inserted.");
+                        MessageBox.Show("New Reservation inserted.");
                     }
                     else
                     {
-                        MessageBox.Show("Failed insetion!!!!");
+                        MessageBox.Show("Reservation Failed!!!!");
                     }
                 }
                 catch (Exception ex)
@@ -101,11 +101,6 @@ namespace HotelManagmentApp
             }
         }
 
-        private void comboRoomNoClient_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void comboRoomTypeClient_SelectedIndexChanged(object sender, EventArgs e)
         {
             string roomID = comboRoomTypeClient.SelectedValue.ToString();
@@ -118,10 +113,10 @@ namespace HotelManagmentApp
             {
                 con.Open();
 
-                string sql = "SELECT * FROM room WHERE roomType=" +roomID;
+                string sql = "SELECT * FROM room WHERE roomType=" + roomID;
                 SqlCommand cmd = new SqlCommand(sql, con);
 
-                SqlDataAdapter adapter = new SqlDataAdapter(sql,con);
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
                 adapter.Fill(dt);
                 comboRoomNoClient.DataSource = dt;
                 comboRoomNoClient.DisplayMember = "roomNumber";
@@ -139,6 +134,6 @@ namespace HotelManagmentApp
             }
         }
 
-        
+
     }
 }

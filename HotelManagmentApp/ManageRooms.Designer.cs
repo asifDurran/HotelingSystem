@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelFree = new System.Windows.Forms.Panel();
+            this.radioButtonNo = new System.Windows.Forms.RadioButton();
+            this.radioButtonYes = new System.Windows.Forms.RadioButton();
             this.Free = new System.Windows.Forms.Label();
             this.comboRoomType = new System.Windows.Forms.ComboBox();
             this.buttonResetClient = new System.Windows.Forms.Button();
@@ -43,13 +46,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelFree = new System.Windows.Forms.Panel();
-            this.radioButtonYes = new System.Windows.Forms.RadioButton();
-            this.radioButtonNo = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
+            this.panelFree.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRooms)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panelFree.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,6 +74,42 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(980, 534);
             this.panel1.TabIndex = 1;
+            // 
+            // panelFree
+            // 
+            this.panelFree.BackColor = System.Drawing.Color.White;
+            this.panelFree.Controls.Add(this.radioButtonNo);
+            this.panelFree.Controls.Add(this.radioButtonYes);
+            this.panelFree.Location = new System.Drawing.Point(163, 319);
+            this.panelFree.Name = "panelFree";
+            this.panelFree.Size = new System.Drawing.Size(208, 57);
+            this.panelFree.TabIndex = 18;
+            // 
+            // radioButtonNo
+            // 
+            this.radioButtonNo.AutoSize = true;
+            this.radioButtonNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonNo.ForeColor = System.Drawing.Color.Red;
+            this.radioButtonNo.Location = new System.Drawing.Point(119, 12);
+            this.radioButtonNo.Name = "radioButtonNo";
+            this.radioButtonNo.Size = new System.Drawing.Size(49, 24);
+            this.radioButtonNo.TabIndex = 1;
+            this.radioButtonNo.TabStop = true;
+            this.radioButtonNo.Text = "No";
+            this.radioButtonNo.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonYes
+            // 
+            this.radioButtonYes.AutoSize = true;
+            this.radioButtonYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonYes.ForeColor = System.Drawing.Color.Green;
+            this.radioButtonYes.Location = new System.Drawing.Point(3, 12);
+            this.radioButtonYes.Name = "radioButtonYes";
+            this.radioButtonYes.Size = new System.Drawing.Size(58, 24);
+            this.radioButtonYes.TabIndex = 0;
+            this.radioButtonYes.TabStop = true;
+            this.radioButtonYes.Text = "Yes";
+            this.radioButtonYes.UseVisualStyleBackColor = true;
             // 
             // Free
             // 
@@ -229,42 +265,6 @@
             this.label1.Text = "Manage Rooms";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelFree
-            // 
-            this.panelFree.BackColor = System.Drawing.Color.White;
-            this.panelFree.Controls.Add(this.radioButtonNo);
-            this.panelFree.Controls.Add(this.radioButtonYes);
-            this.panelFree.Location = new System.Drawing.Point(163, 319);
-            this.panelFree.Name = "panelFree";
-            this.panelFree.Size = new System.Drawing.Size(208, 57);
-            this.panelFree.TabIndex = 18;
-            // 
-            // radioButtonYes
-            // 
-            this.radioButtonYes.AutoSize = true;
-            this.radioButtonYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonYes.ForeColor = System.Drawing.Color.Green;
-            this.radioButtonYes.Location = new System.Drawing.Point(3, 12);
-            this.radioButtonYes.Name = "radioButtonYes";
-            this.radioButtonYes.Size = new System.Drawing.Size(58, 24);
-            this.radioButtonYes.TabIndex = 0;
-            this.radioButtonYes.TabStop = true;
-            this.radioButtonYes.Text = "Yes";
-            this.radioButtonYes.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonNo
-            // 
-            this.radioButtonNo.AutoSize = true;
-            this.radioButtonNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonNo.ForeColor = System.Drawing.Color.Red;
-            this.radioButtonNo.Location = new System.Drawing.Point(119, 12);
-            this.radioButtonNo.Name = "radioButtonNo";
-            this.radioButtonNo.Size = new System.Drawing.Size(49, 24);
-            this.radioButtonNo.TabIndex = 1;
-            this.radioButtonNo.TabStop = true;
-            this.radioButtonNo.Text = "No";
-            this.radioButtonNo.UseVisualStyleBackColor = true;
-            // 
             // ManageRooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,11 +277,11 @@
             this.Load += new System.EventHandler(this.ManageRooms_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelFree.ResumeLayout(false);
+            this.panelFree.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRooms)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panelFree.ResumeLayout(false);
-            this.panelFree.PerformLayout();
             this.ResumeLayout(false);
 
         }

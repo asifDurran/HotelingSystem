@@ -52,7 +52,7 @@ namespace HotelManagmentApp
 
         private void buttonInsertRoom_Click(object sender, EventArgs e)
         {
-            string roomNumber = textRoomNumber.Text;
+            int roomNumber = Convert.ToInt32(textRoomNumber.Text);
             string roomType = comboRoomType.SelectedValue.ToString();
             string phone = textRoomPhone.Text;
             string free = "";
@@ -67,7 +67,7 @@ namespace HotelManagmentApp
             }
           
 
-            if(textRoomNumber.Text.Trim().Equals("") || textRoomPhone.Text.Trim().Equals("") || comboRoomType.Text.Trim().Equals(""))
+            if(textRoomPhone.Text.Trim().Equals("") || comboRoomType.Text.Trim().Equals("") || textRoomNumber.Text.Trim().Equals(""))
             {
                 MessageBox.Show("All Fields are required", "Empty fields",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
@@ -77,7 +77,7 @@ namespace HotelManagmentApp
 
                 try
                 {
-                    string sql = "INSERT INTO room(roomNumber, roomType, phone, free) VALUES(@roomNumber, @roomType, @phone, @free)";
+                    string sql = "INSERT INTO room(roomNumber,roomType, phone, free) VALUES(@roomNumber, @roomType, @phone, @free)";
                     SqlCommand cmd = new SqlCommand(sql, con);
 
                     cmd.Parameters.AddWithValue("@roomNumber", roomNumber);
@@ -183,8 +183,8 @@ namespace HotelManagmentApp
         private void buttonEditRoom_Click(object sender, EventArgs e)
         {
 
-            string roomNumber = textRoomNumber.Text;
-            string roomType = comboRoomType.Text;
+            int roomNumber = Convert.ToInt32(textRoomNumber.Text);
+            string roomType = comboRoomType.ToString();
             string phone = textRoomPhone.Text;
             string free = "";
 
@@ -197,7 +197,7 @@ namespace HotelManagmentApp
                 free = "No";
             }
 
-            if (textRoomNumber.Text.Trim().Equals("") || textRoomPhone.Text.Trim().Equals("") || comboRoomType.Text.Trim().Equals(""))
+            if (textRoomPhone.Text.Trim().Equals("") || comboRoomType.Text.Trim().Equals(""))
             {
                 MessageBox.Show("All Fields are required", "Empty fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

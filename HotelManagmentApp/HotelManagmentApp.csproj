@@ -47,6 +47,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CONNECT.cs" />
+    <Compile Include="hotel_managment_appDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hotel_managment_appDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hotel_managment_appDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hotel_managment_appDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +113,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="hotel_managment_appDataSet.xsc">
+      <DependentUpon>hotel_managment_appDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="hotel_managment_appDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hotel_managment_appDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hotel_managment_appDataSet.xss">
+      <DependentUpon>hotel_managment_appDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="hotel_managment_appDataSet1.xsc">
+      <DependentUpon>hotel_managment_appDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="hotel_managment_appDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hotel_managment_appDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hotel_managment_appDataSet1.xss">
+      <DependentUpon>hotel_managment_appDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

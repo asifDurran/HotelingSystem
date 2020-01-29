@@ -33,8 +33,6 @@
             this.dateTimePickerIN = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textReseveID = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.comboRoomNoClient = new System.Windows.Forms.ComboBox();
             this.comboRoomTypeClient = new System.Windows.Forms.ComboBox();
             this.buttonResetClient = new System.Windows.Forms.Button();
@@ -60,8 +58,6 @@
             this.panel1.Controls.Add(this.dateTimePickerIN);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textReseveID);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.comboRoomNoClient);
             this.panel1.Controls.Add(this.comboRoomTypeClient);
             this.panel1.Controls.Add(this.buttonResetClient);
@@ -95,7 +91,7 @@
             this.dateTimePickerIN.CustomFormat = "yy/mm/dd";
             this.dateTimePickerIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerIN.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerIN.Location = new System.Drawing.Point(163, 357);
+            this.dateTimePickerIN.Location = new System.Drawing.Point(163, 322);
             this.dateTimePickerIN.Name = "dateTimePickerIN";
             this.dateTimePickerIN.Size = new System.Drawing.Size(231, 24);
             this.dateTimePickerIN.TabIndex = 23;
@@ -104,7 +100,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(76, 362);
+            this.label8.Location = new System.Drawing.Point(65, 327);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 19);
             this.label8.TabIndex = 22;
@@ -120,24 +116,6 @@
             this.label7.TabIndex = 21;
             this.label7.Text = "Date Out:";
             // 
-            // textReseveID
-            // 
-            this.textReseveID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textReseveID.Location = new System.Drawing.Point(163, 172);
-            this.textReseveID.Name = "textReseveID";
-            this.textReseveID.Size = new System.Drawing.Size(231, 29);
-            this.textReseveID.TabIndex = 20;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(46, 182);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 19);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Reserve ID:";
-            // 
             // comboRoomNoClient
             // 
             this.comboRoomNoClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -149,11 +127,10 @@
             "Double\t",
             "Suite",
             "Falimy"});
-            this.comboRoomNoClient.Location = new System.Drawing.Point(163, 294);
+            this.comboRoomNoClient.Location = new System.Drawing.Point(163, 250);
             this.comboRoomNoClient.Name = "comboRoomNoClient";
             this.comboRoomNoClient.Size = new System.Drawing.Size(231, 32);
             this.comboRoomNoClient.TabIndex = 18;
-            this.comboRoomNoClient.SelectedIndexChanged += new System.EventHandler(this.comboRoomNoClient_SelectedIndexChanged);
             // 
             // comboRoomTypeClient
             // 
@@ -166,7 +143,7 @@
             "Double\t",
             "Suite",
             "Falimy"});
-            this.comboRoomTypeClient.Location = new System.Drawing.Point(163, 231);
+            this.comboRoomTypeClient.Location = new System.Drawing.Point(163, 179);
             this.comboRoomTypeClient.Name = "comboRoomTypeClient";
             this.comboRoomTypeClient.Size = new System.Drawing.Size(231, 32);
             this.comboRoomTypeClient.TabIndex = 16;
@@ -225,7 +202,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(57, 307);
+            this.label6.Location = new System.Drawing.Point(63, 263);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 19);
             this.label6.TabIndex = 7;
@@ -243,7 +220,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 244);
+            this.label3.Location = new System.Drawing.Point(42, 186);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 19);
             this.label3.TabIndex = 3;
@@ -317,8 +294,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textReseveID;
         private System.Windows.Forms.ComboBox comboRoomNoClient;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonResetClient;
